@@ -10,9 +10,6 @@ jQuery(function($) {
     }
     $animatables.each(function(i) {
       $animatable = $(this);
-      // console.log('--> Offset top', $animatable.offset().top)
-      // console.log('Height ', $animatable.height())
-      console.log(`(${$animatable.offset().top} + ${$animatable.height()} - 20) < ${offset}`)
       if (($animatable.offset().top + $animatable.height() - 20) < offset) {
         $animatable.removeClass('animatable').addClass('animated');
       }
