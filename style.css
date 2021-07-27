@@ -3,13 +3,17 @@
     padding: 0;
     margin: 0;
 }
+html { 
+    height: 100%; 
+}
 body {
     max-width: 1600px;
     padding: 0 20px;
     margin: 0 auto;
     font-family: 'Cisco Sans TT', sans-serif;
     background: #f2f2f2;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%)
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
+    height: 98%;
 }
 h1 {
     font-size: 46px;
@@ -27,6 +31,7 @@ p {
     line-height: 26px;
     color: #0D274D;
 }
+
 .white {
     color: #fff;
 }
@@ -119,12 +124,9 @@ p {
     padding: 40px 70px;
 }
 .progress-div {
-    display:flex;
+    display: flex;
     height: 120px;
     margin: 20px 0 0 0;
-}
-.stats-container {
-
 }
 .progress {
     width: 120px;
@@ -523,9 +525,6 @@ svg {
         display: block;
         height: 250px;
     }
-    .stats-container {
-        /* max-width: 95%; */
-    }
     .progress,
     .progress.blue {
         width: 150px;
@@ -583,7 +582,7 @@ svg {
     .info-section > h2 {
         margin: 25px auto
     }
-    .infrastructure-col {
+    .infrastructure-col {        
         padding-top: 30px;
     }
     .infrastructure-h2 {
@@ -626,19 +625,7 @@ svg {
  }
 /* Animation */
 /* Check mark animation */
-@keyframes c2 {
-    30% {
-      transform: translateY(50px);
-      fill:#00bceb
-    }
-    70% {
-      transform: translateY(-50px);
-    } 
-    100% {
-      transform: translateY(0);
-      fill: #6ABF4B;
-    }
-  }
+
 @keyframes show-check {
     0% {
         opacity: 0;
@@ -651,10 +638,11 @@ svg {
 }
 @keyframes bounce {
     0% {
+      opacity: 0;
       fill:#00bceb
-
     }
     100% {
+      opacity: 1;
       fill: #6ABF4B;
     }
   }
@@ -693,7 +681,7 @@ svg {
 }
 .animatable {
     visibility: hidden;
-    animation-play-state: paused; 
+    animation-play-state: paused;
 }
 .animated {
     visibility: visible;
@@ -701,12 +689,17 @@ svg {
     animation-duration: 1s;
     animation-play-state: running;
 }
-.animated.circle2 {
-    animation: bounce .5s 1s forwards; 
+.animated > svg > .circle2 {
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
-.animated.check {
+.animated > svg > .check {
     opacity: 0;
-    animation: show-check .5s 1s forwards;
+    animation-name: show-check;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
 .animated.bounceInRight {
 	animation-name: bounceInRight;
