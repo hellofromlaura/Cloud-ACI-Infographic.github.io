@@ -231,6 +231,30 @@ p {
     justify-content: center;
     align-items: center;
 }
+.tooltip {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+  }
+  .deployment-h2 .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .deployment-h2:hover .tooltip {
+    visibility: visible;
+  }
 .info-h2 {
     width: 95%;
     display: block;
@@ -345,6 +369,7 @@ svg {
 }
 
 @media screen and (max-width: 992px) {
+    .logo-1,
     .logo {
         width: 60%;
     }
@@ -398,7 +423,7 @@ svg {
         line-height: 24px;
         color: #0D274D;
     }
-    .logo {
+    .logo-1 {
         padding: 55px;
     } 
     .logo {
@@ -498,7 +523,8 @@ svg {
         font-size: 16px;
         line-height: 22px;
         color: #0D274D;
-    } 
+    }
+    .logo-1, 
     .logo {
         padding: 40px;
         width: 100%;
@@ -508,6 +534,9 @@ svg {
     }
     #second {
         order: 2;
+    }
+    .text-col {
+        justify-content: normal;
     }
     .intro-image,
     .info-section > h1 {
@@ -616,25 +645,7 @@ svg {
     .info-section > img.bounceInRight {
         right: 10px;
     }
-    .cisco-logo {
-        position: relative;
-        display: block;
-        transform: none;
-        max-width: 90%;
-        margin: 0px auto;
-        padding: 25px;
-    }
-    .separator {
-        display: none;
-    }
-    .intel-logo {
-        position: relative;
-        display: block;
-        float: right;
-        width: 40%;
-        margin: 55px 0 0 0;
-        padding: 0 35px;
-    }
+
     .footer > p {
         padding: 0 10px 10px;
     }
