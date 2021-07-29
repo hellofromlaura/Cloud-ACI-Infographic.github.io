@@ -4,7 +4,7 @@
     margin: 0;
 }
 body {
-    max-width: 1600px;
+    max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
     font-family: 'Cisco Sans TT', sans-serif;
@@ -115,7 +115,10 @@ p {
     max-width: 500px;
 }
 .image-col {
-    max-width: 500px;
+    max-width: 300px;
+}
+.image-col.bigger {
+    max-width: 400px;
 }
 p#tooltip {
     position: relative ;
