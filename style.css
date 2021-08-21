@@ -66,7 +66,9 @@ p {
     padding: 12px 30px;
     border-radius: 30px;
     background-color: #00bceb;
-    color: #fff;
+    color: #12284b;
+    font-weight: 400;
+    font-size: 1.1 em;
     text-decoration: none;
     text-align: center;
 }
@@ -163,9 +165,9 @@ svg {
         font-size: 16px;
         line-height: 23px;
     }
-    .row {
+    /* .row {
         --bs-gutter-x: 0;
-    }
+    } */
     .col-4 {
         width: 40%;
     }
@@ -198,7 +200,7 @@ svg {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     h1 {
         font-size: 36px;
         line-height: 44px;
@@ -221,7 +223,7 @@ svg {
     #first {
         order: 1;
         margin: 0 auto;
-        width: 56%;
+        width: 70%;
     }
     #second {
         order: 2;
@@ -233,10 +235,15 @@ svg {
         text-align: center;
     }
     .sub-section {
-        padding: 40px;
+        padding: 40px 40px 1px;
     }
     svg {
         width: 50px;
+        display:block;
+        margin-left: auto;
+    }
+    .checkmark {
+        margin-left: -20px;
     }
     .info-div {
         padding: 45px 0px;
@@ -250,21 +257,35 @@ svg {
     .contain-width.mobile {
         padding: 25px 0px 0px;
     }
+    .col-3, .col-2 {
+        width: 12%;
+    }
+    .col-9 {
+        width: 88%;
+    }
+    .stacked {
+        width: 500px;
+        padding: 40px 0;
+        margin: 0 auto;
+    }
     .mobile > img {
         padding: 25px;
     }
     .infrastructure-col {
         padding: 20px;
     }
-    .infra {
-        margin: 0px auto 30px;
-        width: 80%;
-    }
     .image-col, .text-col {
         padding: 0;
     }
     .info-section {
         padding: 40px 30px;
+    }
+    .padding-bottom {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .center-margin {
+        margin: auto;
     }
  }
 
@@ -301,8 +322,9 @@ svg {
         padding-top: 0px;
     }
     .row.mobile {
-        justify-content: center;
+        width: 95%;
         padding-bottom: 20px;
+        margin: auto;
     }
     .text-col {
         justify-content: normal;
@@ -313,6 +335,15 @@ svg {
     }
     .sub-section {
         padding: 25px 5px 5px;
+    }
+    svg {
+        margin-left: -10px;
+    }
+    .checkmark {
+        margin-left: -10px;
+    }
+    .stacked {
+        width: 100%;
     }
     .info-div {
         padding: 10px 0 30px;
@@ -380,6 +411,9 @@ svg {
 		opacity: 0;
 		transform: translateX(-2000px);
 	}
+    60% {
+		opacity: 0;
+	}
 	100% {
 		opacity: 1;
 		transform: translateX(0);
@@ -389,6 +423,9 @@ svg {
 	0% {
 		opacity: 0;
 		transform: translateX(2000px);
+	}
+    60% {
+		opacity: 0;
 	}
 	100% {
 		opacity: 1;
@@ -429,6 +466,7 @@ svg {
 }
 .animated.bounceInRight {
 	animation-name: bounceInRight;
+    animation-duration: 1.5s;
 }
 .animated.bounceInLeft {
     animation-duration: 2s;
